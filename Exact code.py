@@ -34,11 +34,7 @@ def Proceed():
     # Open Camera
         capture = cv2.VideoCapture(0)
         o=1
-        t=0
-        th=0
-        f=0
-        fi=0
-        s=0
+        t=th=f=fi=s=1
         
         while capture.isOpened():
         
@@ -135,6 +131,7 @@ def Proceed():
                     cv2.putText(frame, "SIX", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
                 else:
                     pass
+                
                 if count_defects == 0:
                     if o==1:
                         wb.open_new_tab('http://www.'+finger1+'.com')
